@@ -20,7 +20,7 @@ class ModernBertAPI(ls.LitAPI):
         Sets up the pipeline for the fill-mask task using the specified device.
         """
         # Initialize the pipeline with the specified device
-        model_name = "answerdotai/ModernBERT-large"
+        model_name = "answerdotai/ModernBERT-base"
         self.pipeline = pipeline(
             "fill-mask",
             model=model_name,

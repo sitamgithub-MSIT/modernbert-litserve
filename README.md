@@ -17,14 +17,16 @@ The project is structured as follows:
 - Python (for the programming language)
 - PyTorch (for the deep learning framework)
 - Hugging Face Transformers Library (for the model)
-- LitServe (for the web application)
+- LitServe (for the serving engine)
 
 ## Getting Started
 
 To get started with this project, follow the steps below:
 
 1. Run the server: `python server.py`
-2. Sending requests: `python client.py`
+2. Upon running the server successfully, you will see uvicorn running on port 8000.
+3. Open a new terminal window.
+4. Run the client: `python client.py`
 
 Now, you can see the output of the model based on the text input. The model will predict the masked word in the sentence.
 

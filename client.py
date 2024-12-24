@@ -1,4 +1,5 @@
 import requests
+from pprint import pprint
 
 
 def test_server(input_text):
@@ -18,7 +19,7 @@ def test_server(input_text):
     response = requests.post(url, json=payload)
 
     # Print the response from the server
-    print(response.json())
+    pprint(response.json())
 
 
 if __name__ == "__main__":

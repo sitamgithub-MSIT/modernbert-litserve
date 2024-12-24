@@ -1,6 +1,6 @@
 # ModernBERT LitServe
 
-[ModernBERT](https://huggingface.co/answerdotai/ModernBERT-base) models offer significant improvements over original BERT, boasting faster training, better performance on downstream tasks, and enhanced efficiency through architectural changes and optimized training techniques. This project demonstrates the use of ModernBERT model for the fill-mask task served using LitServe which is an easy-to-use, flexible serving engine for AI models built on FastAPI.
+[ModernBERT](https://huggingface.co/answerdotai/ModernBERT-base) models offer significant improvements over the original BERT, boasting faster training, better performance on downstream tasks, and enhanced efficiency through architectural changes and optimized training techniques. This project demonstrates the use of the ModernBERT model for the fill-mask task served using LitServe, an easy-to-use, flexible serving engine for AI models built on FastAPI.
 
 ## Project Structure
 
@@ -10,7 +10,7 @@ The project is structured as follows:
 - `client.py`: The file containing the code for client-side requests.
 - `LICENSE`: The license file for the project.
 - `README.md`: The README file that contains information about the project.
-- `assets`: The folder that contains the screenshots for working on the application.
+- `assets`: The folder containing screenshots for working on the application.
 
 ## Tech Stack
 
@@ -30,7 +30,7 @@ Now, you can see the output of the model based on the text input. The model will
 
 ## Usage
 
-The project can be used to serve the ModernBERT model using LitServe. Here the model is used for fill-mask task where the model predicts the masked word in the sentence. Other than that, the model can be used for various NLP downstream tasks after fine-tuning.
+The project can be used to serve the ModernBERT model using LitServe. Here, the model is used for the fill-mask task, where it predicts the masked word in the sentence. After fine-tuning, the model can also be used for various NLP downstream tasks.
 
 ## Contributing
 
@@ -42,6 +42,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-If you have any questions or suggestions regarding the project, feel free to reach out to me on my GitHub profile.
+If you have any questions or suggestions about the project, feel free to contact me on my GitHub profile.
 
 Happy coding! 🚀

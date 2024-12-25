@@ -1,5 +1,7 @@
 # ModernBERT LitServe
 
+[![Open In Studio](https://pl-bolts-doc-images.s3.us-east-2.amazonaws.com/app-2/studio-badge.svg)](https://lightning.ai/sitammeur/studios/modernbert-litserve)
+
 [ModernBERT](https://huggingface.co/answerdotai/ModernBERT-base) models offer significant improvements over the original BERT, boasting faster training, better performance on downstream tasks, and enhanced efficiency through architectural changes and optimized training techniques. This project demonstrates the use of the ModernBERT model for the fill-mask task served using LitServe, an easy-to-use, flexible serving engine for AI models built on FastAPI.
 
 ## Project Structure

@@ -13,6 +13,7 @@ The project is structured as follows:
 - `LICENSE`: The license file for the project.
 - `README.md`: The README file that contains information about the project.
 - `assets`: The folder containing screenshots for working on the application.
+- `.gitignore`: The file containing the list of files and directories to be ignored by Git.
 
 ## Tech Stack
 

@@ -2,7 +2,7 @@
 
 [![Open In Studio](https://pl-bolts-doc-images.s3.us-east-2.amazonaws.com/app-2/studio-badge.svg)](https://lightning.ai/sitammeur/studios/modernbert-litserve)
 
-[ModernBERT](https://huggingface.co/collections/answerdotai/modernbert-67627ad707a4acbf33c41deb) models offer significant improvements over the original BERT, boasting faster training, better performance on downstream tasks, and enhanced efficiency through architectural changes and optimized training techniques. This project demonstrates the use of the ModernBERT model for the fill-mask task served using LitServe, an easy-to-use, flexible serving engine for AI models built on FastAPI.
+[ModernBERT](https://huggingface.co/collections/answerdotai/modernbert-67627ad707a4acbf33c41deb) models offer significant improvements over the original BERT, boasting faster training, better performance on downstream tasks, and enhanced efficiency through architectural changes and optimized training techniques. This project shows how to create a self-hosted, private API that deploys a fine-tuned ModernBERT [zeroshot classification model](https://huggingface.co/MoritzLaurer/ModernBERT-large-zeroshot-v2.0) with LitServe, an easy-to-use, flexible serving engine for AI models built on FastAPI.
 
 ## Project Structure
 
@@ -31,11 +31,11 @@ To get started with this project, follow the steps below:
 3. Open a new terminal window.
 4. Run the client: `python client.py`
 
-Now, you can see the output of the model based on the text input. The model will predict the masked word in the sentence.
+Now, you can see the output of the model based on the input request. The model will classify the labels in the sentence.
 
 ## Usage
 
-The project can be used to serve the ModernBERT model using LitServe. Here, the model is used for the fill-mask task, where it predicts the masked word in the sentence. After fine-tuning, the model can also be used for various NLP downstream tasks.
+The project can be used to serve the ModernBERT model using LitServe. The model used in this project is a zero-shot text classification model, meaning it can classify text it has not seen during training. This is a powerful feature that can be used in a variety of applications, such as content moderation, sentiment analysis of new product reviews, topic classification of news articles, identifying the intent of customer support queries, and classifying social media posts based on their subject matter; essentially any situation where you want to quickly categorize text into predefined classes without a large labeled training dataset for each class.
 
 ## Contributing
 

@@ -1,28 +1,18 @@
 import requests
 from pprint import pprint
 
+url = "http://localhost:8000/predict"
 
-def test_server(input_text):
-    """
-    Sends a POST request to the server with the given input text and prints the server's response.
+# Define the text and labels for classification
+payload = {
+    "text": "Angela Merkel is a politician in Germany and leader of the CDU",
+    "labels": ["politics", "economy", "entertainment", "environment"],
+    "hypothesis_template": "This text is about {}",
+    "multi_label": False,
+}
 
-    Args:
-        input_text (str): The text to be sent to the server for prediction.
+# Send the request to the server
+response = requests.post(url, json=payload)
 
-    Returns: None
-    """
-    # API endpoint URL for the server
-    url = "http://127.0.0.1:8000/predict"
-
-    # Send a POST request with the request payload
-    payload = {"input_text": input_text}
-    response = requests.post(url, json=payload)
-
-    # Print the response from the server
-    pprint(response.json())
-
-
-if __name__ == "__main__":
-    # Sample input text for testing. e.g., "The capital of France is [MASK]."
-    input_text = "He walked to the [MASK]."
-    test_server(input_text)
+# Print the predictions
+pprint(response.json())

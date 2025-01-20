@@ -11,7 +11,7 @@ class ModernBertAPI(ls.LitAPI):
     Methods:
         - setup(device): Initializes the pipeline with the specified device.
         - decode_request(request): Decodes the incoming request to extract the inputs.
-        - predict(input_text): Uses the pipeline to predict the classification results.
+        - predict(data): Uses the pipeline to predict the classification results.
         - encode_response(results): Encodes the prediction results into a dictionary format.
     """
 

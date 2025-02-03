@@ -10,9 +10,9 @@ class ModernBertAPI(ls.LitAPI):
 
     Methods:
         - setup(device): Initializes the pipeline with the specified device.
-        - decode_request(request): Decodes the incoming request to extract the inputs.
+        - decode_request(request): Convert the request payload to model input.
         - predict(data): Uses the pipeline to predict the classification results.
-        - encode_response(results): Encodes the prediction results into a dictionary format.
+        - encode_response(results): Convert the model output to a response payload.
     """
 
     def setup(self, device):
@@ -21,16 +21,17 @@ class ModernBertAPI(ls.LitAPI):
         """
         # Initialize the pipeline with the specified device
         model_name = "MoritzLaurer/ModernBERT-large-zeroshot-v2.0"
+        self.device = device
         self.pipeline = pipeline(
             "zero-shot-classification", 
             model=model_name, 
             torch_dtype=torch.bfloat16, 
-            device=device
+            device=self.device
         )
 
     def decode_request(self, request):
         """
-        Decodes the input request to extract the inputs.
+        Convert the request payload to model input.
         """
         # Decode the incoming request
         text = request["text"]
@@ -43,7 +44,7 @@ class ModernBertAPI(ls.LitAPI):
 
     def predict(self, data):
         """
-        Generates a prediction based on the provided inputs.
+        Run inference and generate prediction based on the provided inputs.
         """
         # Perform zero-shot classification
         text, labels, hypothesis_template, multi_label = data
@@ -56,9 +57,8 @@ class ModernBertAPI(ls.LitAPI):
 
     def encode_response(self, results):
         """
-        Encodes the given results into a dictionary format.
+        Convert the model output to a response payload.
         """
-        # Encode the response as JSON
         output = [
             {"label": label, "score": f"{score * 100:.2f}%"}
             for label, score in zip(results["labels"], results["scores"])

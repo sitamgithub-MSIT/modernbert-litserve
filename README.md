@@ -1,6 +1,6 @@
 # ModernBERT LitServe
 
-[![Open In Studio](https://pl-bolts-doc-images.s3.us-east-2.amazonaws.com/app-2/studio-badge.svg)](https://lightning.ai/sitammeur/studios/modernbert-litserve)
+[![Open In Studio](https://pl-bolts-doc-images.s3.us-east-2.amazonaws.com/app-2/studio-badge.svg)](https://lightning.ai/sitammeur/studios/deploy-modernbert-zero-shot-classification-model)
 
 [ModernBERT](https://huggingface.co/collections/answerdotai/modernbert-67627ad707a4acbf33c41deb) models offer significant improvements over the original BERT, boasting faster training, better performance on downstream tasks, and enhanced efficiency through architectural changes and optimized training techniques. This project shows how to create a self-hosted, private API that deploys a fine-tuned ModernBERT [zeroshot classification model](https://huggingface.co/MoritzLaurer/ModernBERT-large-zeroshot-v2.0) with LitServe, an easy-to-use, flexible serving engine for AI models built on FastAPI.
 
